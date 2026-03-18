@@ -2,12 +2,6 @@
 
 <div align="center">
 
-![GitHub repo size](https://img.shields.io/github/repo-size/AliZafar780/opencode-agents-mcp)
-![GitHub stars](https://img.shields.io/github/stars/AliZafar780/opencode-agents-mcp)
-![GitHub forks](https://img.shields.io/github/forks/AliZafar780/opencode-agents-mcp)
-![GitHub license](https://img.shields.io/github/license/AliZafar780/opencode-agents-mcp)
-![Discord](https://img.shields.io/discord/123456789)
-
 **A comprehensive collection of AI agent skills and Model Context Protocol (MCP) servers for building powerful automation and development workflows.**
 
 </div>
