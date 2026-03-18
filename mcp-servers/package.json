@@ -1,0 +1,27 @@
+{
+  "name": "mcp-servers-collection",
+  "version": "1.0.0",
+  "description": "Collection of Model Context Protocol (MCP) servers",
+  "type": "module",
+  "scripts": {
+    "start:filesystem": "node filesystem/index.js",
+    "start:terminal": "node terminal/index.js",
+    "start:github": "node github/index.js",
+    "start:docker": "node docker/index.js",
+    "start:kubernetes": "node kubernetes/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "@octokit/rest": "^20.0.0",
+    "node-fetch": "^3.3.2",
+    "pg": "^8.20.0"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ai",
+    "servers"
+  ],
+  "author": "",
+  "license": "MIT"
+}
