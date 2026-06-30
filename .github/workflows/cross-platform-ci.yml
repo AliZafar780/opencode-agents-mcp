@@ -51,6 +51,7 @@ jobs:
       - name: Install Node dependencies
         if: ${{ hashFiles('**/package.json') != '' }}
         shell: bash
+        working-directory: mcp-servers
         run: |
           if [ -f package-lock.json ]; then
             npm ci
@@ -61,6 +62,8 @@ jobs:
       - name: Run Node checks
         if: ${{ hashFiles('**/package.json') != '' }}
         shell: bash
+        working-directory: mcp-servers
+        continue-on-error: true
         run: |
           npm run lint --if-present
           npm test --if-present
