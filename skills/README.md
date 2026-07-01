@@ -40,6 +40,9 @@ Password strength analysis, hash cracking, and credential security.
 ### ethical-hacking
 Penetration testing, vulnerability assessment, and red teaming.
 
+### god-syndicate
+Ultimate offensive security — APT simulation, zero-day research, C2 infrastructure, exploit development, and red team orchestration. The apex predator of security skills.
+
 ### security-engineer
 Threat modeling, secure coding, and security automation.
 
@@ -60,6 +63,9 @@ LLM integration, prompt engineering, AI agents, and ML pipelines.
 ### data-engineering
 ETL/ELT architecture, data lakes, real-time streaming, and data platforms.
 
+### ai-agent-builder
+Build autonomous AI agents — multi-agent orchestration, RAG pipelines, tool-using agents, LLM integration, and production agent deployment.
+
 ## Cloud/DevOps Skills
 
 ### devops
@@ -67,6 +73,9 @@ GitOps, zero-trust security, multi-cloud infrastructure, and deployment automati
 
 ### cloud-architecture
 Multi-cloud design, serverless architecture, and cloud-native patterns.
+
+### zero-trust
+Zero Trust Architecture — microsegmentation, IDAAM (Identity-Aware Access Management), SASE, continuous verification, and zero trust network access.
 
 ### monitoring
 Observability, metrics, logging, alerting, and production reliability.
@@ -101,6 +110,9 @@ System-level debugging, memory analysis, and troubleshooting.
 
 ### test-engineer
 Property-based testing, mutation testing, and QA automation.
+
+### fullstack-master
+End-to-end engineering — React/Next.js frontends, Node.js backends, TypeScript, API design, databases, testing, and cloud-native deployment.
 
 ## Mobile Skills
 

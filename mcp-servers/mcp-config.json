@@ -1,20 +1,140 @@
 {
+  "$schema": "https://schema.opencode.ai/mcp-config-1.0.json",
+  "meta": {
+    "name": "OpenCode MCP Servers Collection",
+    "version": "2.0.0",
+    "description": "Complete collection of 15 MCP servers for AI agent tool integration"
+  },
   "mcpServers": {
+    "aws": {
+      "command": "node",
+      "args": ["mcp-servers/aws/index.js"],
+      "env": {
+        "AWS_ACCESS_KEY_ID": "${AWS_ACCESS_KEY_ID}",
+        "AWS_SECRET_ACCESS_KEY": "${AWS_SECRET_ACCESS_KEY}",
+        "AWS_DEFAULT_REGION": "us-east-1"
+      },
+      "description": "AWS EC2, S3, Lambda, ECS, RDS, IAM, CloudFormation, and CloudWatch management"
+    },
+    "burp": {
+      "command": "node",
+      "args": ["mcp-servers/burp/index.js"],
+      "env": {
+        "BURP_API_URL": "${BURP_API_URL}"
+      },
+      "description": "Burp Suite Professional REST API for web security scanning"
+    },
+    "chat-bridge": {
+      "command": "node",
+      "args": ["mcp-servers/chat-bridge/index.js"],
+      "env": {
+        "TWILIO_ACCOUNT_SID": "${TWILIO_ACCOUNT_SID}",
+        "TWILIO_AUTH_TOKEN": "${TWILIO_AUTH_TOKEN}",
+        "TELEGRAM_BOT_TOKEN": "${TELEGRAM_BOT_TOKEN}",
+        "OPENAI_API_KEY": "${OPENAI_API_KEY}"
+      },
+      "description": "Cross-platform chat bridge (WhatsApp <-> Telegram <-> AI)"
+    },
+    "cve": {
+      "command": "node",
+      "args": ["mcp-servers/cve/index.js"],
+      "env": {
+        "NVD_API_KEY": "${NVD_API_KEY}"
+      },
+      "description": "CVE/NVD vulnerability database search, CVSS metrics, exploit lookup"
+    },
+    "database": {
+      "command": "node",
+      "args": ["mcp-servers/database/index.js"],
+      "description": "Multi-DB query execution (PostgreSQL, MySQL, SQLite) with transaction support"
+    },
+    "docker": {
+      "command": "node",
+      "args": ["mcp-servers/docker/index.js"],
+      "description": "Docker container management: run, exec, logs, build, compose, networks, volumes"
+    },
     "filesystem": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/home/aliz"]
+      "command": "node",
+      "args": ["mcp-servers/filesystem/index.js"],
+      "description": "Secure file read/write, directory operations, glob search, content search"
     },
     "github": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-github"]
+      "command": "node",
+      "args": ["mcp-servers/github/index.js"],
+      "env": {
+        "GITHUB_TOKEN": "${GITHUB_TOKEN}"
+      },
+      "description": "GitHub API: repos, issues, pull requests, commits, actions, search"
+    },
+    "kubernetes": {
+      "command": "node",
+      "args": ["mcp-servers/kubernetes/index.js"],
+      "description": "Kubernetes cluster management: pods, services, deployments, logs, exec, configmaps, secrets"
+    },
+    "notion": {
+      "command": "node",
+      "args": ["mcp-servers/notion/index.js"],
+      "env": {
+        "NOTION_API_KEY": "${NOTION_API_KEY}"
+      },
+      "description": "Notion workspace integration: pages, databases, search, blocks"
     },
     "search": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-brave-search"]
+      "command": "node",
+      "args": ["mcp-servers/search/index.js"],
+      "description": "Web search, page fetch with CSS extraction, and content scraping"
+    },
+    "shodan": {
+      "command": "node",
+      "args": ["mcp-servers/shodan/index.js"],
+      "env": {
+        "SHODAN_API_KEY": "${SHODAN_API_KEY}",
+        "CENSYS_API_ID": "${CENSYS_API_ID}",
+        "CENSYS_API_SECRET": "${CENSYS_API_SECRET}"
+      },
+      "description": "Shodan internet scanning + Censys host/certificate search"
+    },
+    "simple-chat": {
+      "command": "node",
+      "args": ["mcp-servers/simple-chat/index.js"],
+      "env": {
+        "TWILIO_ACCOUNT_SID": "${TWILIO_ACCOUNT_SID}",
+        "TWILIO_AUTH_TOKEN": "${TWILIO_AUTH_TOKEN}",
+        "TELEGRAM_BOT_TOKEN": "${TELEGRAM_BOT_TOKEN}",
+        "SLACK_BOT_TOKEN": "${SLACK_BOT_TOKEN}"
+      },
+      "description": "Unified messaging: send to WhatsApp, Telegram, and Slack from one tool"
     },
     "slack": {
-      "command": "npx", 
-      "args": ["-y", "@modelcontextprotocol/server-slack"]
+      "command": "node",
+      "args": ["mcp-servers/slack/index.js"],
+      "env": {
+        "SLACK_BOT_TOKEN": "${SLACK_BOT_TOKEN}"
+      },
+      "description": "Slack messaging: send messages, DMs, create channels, upload files, reactions"
+    },
+    "telegram": {
+      "command": "node",
+      "args": ["mcp-servers/telegram/index.js"],
+      "env": {
+        "TELEGRAM_BOT_TOKEN": "${TELEGRAM_BOT_TOKEN}"
+      },
+      "description": "Telegram bot: send messages, photos, documents, inline keyboards, manage groups"
+    },
+    "terminal": {
+      "command": "node",
+      "args": ["mcp-servers/terminal/index.js"],
+      "description": "Shell command execution, script running, background processes, grep, find"
+    },
+    "whatsapp": {
+      "command": "node",
+      "args": ["mcp-servers/whatsapp/index.js"],
+      "env": {
+        "TWILIO_ACCOUNT_SID": "${TWILIO_ACCOUNT_SID}",
+        "TWILIO_AUTH_TOKEN": "${TWILIO_AUTH_TOKEN}",
+        "WHATSAPP_FROM": "${WHATSAPP_FROM}"
+      },
+      "description": "WhatsApp/Twilio Business API: send messages, media, templates"
     }
   }
 }

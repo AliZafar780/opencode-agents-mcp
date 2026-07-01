@@ -371,7 +371,7 @@ class AWSMCPServer {
 
   async ecsTasks(cluster, region) {
     const output = await this.runCmd(`aws ecs list-tasks --cluster ${cluster} ${this.regionFlag(region)} --output json`);
-    return { content: [{ type: 'text', text', text: output }] };
+    return { content: [{ type: 'text', text: output }] };
   }
 
   async rdsList(region) {

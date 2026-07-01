@@ -1,27 +1,56 @@
 {
-  "name": "mcp-servers-collection",
-  "version": "1.0.0",
-  "description": "Collection of Model Context Protocol (MCP) servers",
+  "name": "opencode-mcp-servers",
+  "version": "2.0.0",
+  "description": "Complete collection of 15 Model Context Protocol (MCP) servers for AI agent tool integration",
   "type": "module",
   "scripts": {
-    "start:filesystem": "node filesystem/index.js",
-    "start:terminal": "node terminal/index.js",
-    "start:github": "node github/index.js",
+    "start:aws": "node aws/index.js",
+    "start:burp": "node burp/index.js",
+    "start:chat-bridge": "node chat-bridge/index.js",
+    "start:cve": "node cve/index.js",
+    "start:database": "node database/index.js",
     "start:docker": "node docker/index.js",
-    "start:kubernetes": "node kubernetes/index.js"
+    "start:filesystem": "node filesystem/index.js",
+    "start:github": "node github/index.js",
+    "start:kubernetes": "node kubernetes/index.js",
+    "start:notion": "node notion/index.js",
+    "start:search": "node search/index.js",
+    "start:shodan": "node shodan/index.js",
+    "start:simple-chat": "node simple-chat/index.js",
+    "start:slack": "node slack/index.js",
+    "start:telegram": "node telegram/index.js",
+    "start:terminal": "node terminal/index.js",
+    "start:whatsapp": "node whatsapp/index.js",
+    "start:all": "node init.js",
+    "lint": "eslint mcp-servers/",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",
     "@octokit/rest": "^20.0.0",
+    "better-sqlite3": "^9.4.0",
+    "express": "^4.18.2",
+    "jsdom": "^24.0.0",
+    "mysql2": "^3.9.0",
     "node-fetch": "^3.3.2",
     "pg": "^8.20.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "jest": "^29.7.0"
   },
   "keywords": [
     "mcp",
     "model-context-protocol",
-    "ai",
-    "servers"
+    "ai-agent",
+    "tools",
+    "opencode",
+    "api-integration",
+    "server-collection"
   ],
-  "author": "",
-  "license": "MIT"
+  "author": "OpenCode Agents MCP",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
 }
